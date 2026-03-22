@@ -1,0 +1,215 @@
+<projects>
+	<project cpu_manufacturer="Nuvoton" cpu_name="M251" cpu_generic_name="M251" board_manufacturer="" board_name="" name="M251 C/C++ Executable" description="A C/C++ executable for Nuvoton M251 with stdDriver." type="Executable" template_name="Nuvoton M251_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+	    <configuration name="$(Configuration)" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/Scripts/M25x_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="256" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+		<property name="arm_linker_heap_size" value="256" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(DeviceIncludePath);$(StdDriverDir);$(TargetsDir)/M25x/CMSIS/M251/Device/Include;" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M25x/XML/property_groups.xml" />
+		<propertygroup name="Target" value="M251KG6AE" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+		<property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+
+		<folder name="CMSIS Files">
+			<file name="$(DeviceHeaderFile)" expand="no" />
+			<file name="$(DeviceSystemFile)" expand="no">
+				<property name="default_code_section" value=".init" />
+				<property name="default_const_section" value=".init_rodata" />
+			</file>
+		</folder>
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M25x/Scripts/M25x_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder>
+		<folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+			<file name="Source/main.c" source="$(TargetsDir)/M25x/Source/main.c" />
+		</folder>
+		<folder name="StdDriver Files">
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/acmp.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/bpwm.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/clk.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/crc.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/crypto.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/dac.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/eadc.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/ebi.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/fmc.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/gpio.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/i2c.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/lcd.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/pdma.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/pwm.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/qspi.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/rtc.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/sc.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/scuart.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/spi.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/sys.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/timer.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/timer_pwm.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/tk.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/uart.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/usbd.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/usci_i2c.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/usci_spi.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/usci_uart.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/wdt.c" />
+			<file name="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/src/wwdt.c" />
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M25x/Source/M25x_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+
+	<project cpu_manufacturer="Nuvoton" cpu_name="M251" cpu_generic_name="M251" board_manufacturer="" board_name="" name="M251 C/C++ Executable" description="A C/C++ executable for Nuvoton M251 in baremetal." type="Executable" template_name="Nuvoton M251_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/M25x/Scripts/M25x_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="256" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="0" choose="Yes" />
+		<property name="arm_linker_heap_size" value="256" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(DeviceIncludePath);$(StdDriverDir);" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M25x/XML/property_groups.xml" />
+		<propertygroup name="Target" value="M251KG6AE" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+
+		<folder name="CMSIS Files">
+			<file name="$(DeviceHeaderFile)" expand="no" />
+		</folder>
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M25x/Scripts/M25x_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder>
+		<folder name="Source Files" filter="c;cpp;cxx;cc;h;s;asm;inc">
+			<file name="Source/main.c" source="$(TargetsDir)/M25x/Source/main.c" />
+			<file name="Source/system.c" source="$(TargetsDir)/M25x/Source/system.c" expand="no">
+				<property name="default_code_section" value=".init" />
+				<property name="default_const_section" value=".init_rodata" />
+			</file>
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M25x/Source/M25x_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+
+	<project cpu_manufacturer="Nuvoton" cpu_name="M251" cpu_generic_name="M251" board_manufacturer="" board_name="" name="M251 C/C++ Executable" description="A C/C++ executable for Nuvoton M251 with yss OS." type="Executable" template_name="Nuvoton M251_EXE">
+		<configuration name="THUMB Debug" />
+		<configuration name="THUMB Release" />
+
+		<property name="target_get_partname_script" value="GetPartName()" />
+		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
+		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+		<property name="target_script_file" value="$(TargetsDir)/M25x/Scripts/M25x_Target.js" />
+		<property name="target_reset_script" value="Reset();" />
+		<property name="arm_fp_abi" value="Soft" />
+		<property name="arm_linker_stack_size" value="1024" choose="Yes" />
+		<property name="arm_linker_process_stack_size" value="1024" choose="Yes" />
+		<property name="arm_linker_heap_size" value="16384" choose="Yes" />
+		<property name="linker_output_format" />
+		<property name="linker_printf_fmt_level" />
+		<property name="linker_printf_width_precision_supported" />
+		<property name="linker_printf_fp_enabled" />
+		<property name="linker_scanf_fmt_level" />
+		<property name="linker_scanf_fp_enabled" />
+		<property name="linker_scanf_character_group_matching_enabled" />
+		<property name="c_user_include_directories" value="$(TargetsDir)/M25x/CMSIS/M251/StdDriver/inc;$(TargetsDir)/M25x/CMSIS/M251/Device/Include;$(ProjectDir)/app/inc;$(TargetsDir)/M25x/yss OS/yss/inc" />
+		<property name="property_groups_file_path" value="$(TargetsDir)/M25x/XML/property_groups.xml" />
+		<property name="gcc_cplusplus_language_standard" value="gnu++11" />
+		<propertygroup name="Target" value="M251KG6AE" choose="Yes" />
+		<propertygroup name="Placement" value="Flash" choose="Yes" />
+		<property name="CMSIS_CORE" value="Yes" />
+
+		<property name="arm_interwork" value="No" />
+		<property name="arm_target_debug_interface_type" value="ADIv5" />
+		<property name="arm_target_flash_loader_file_path" value="$(DeviceLoaderFile)" configuration="Flash" />
+		<property name="debug_register_definition_file" value="$(DeviceRegisterDefinitionFile)" />
+		<property name="linker_memory_map_file" value="$(DeviceMemoryMapFile)" />
+		<property name="gcc_entry_point" value="Reset_Handler" />
+
+		<folder name="Script Files">
+			<file name="$(TargetsDir)/M25x/Scripts/M25x_Target.js" expand="no">
+				<property name="file_type" value="Reset Script" />
+			</file>
+		</folder>
+		<folder name="APP Source Files">
+			<folder name="src">
+				<file name="$(ProjectDir)/app/src/main.cpp" source="$(TargetsDir)/M25x/yss OS/app/src/main.cpp" />
+				<file name="$(ProjectDir)/app/src/bsp.cpp" source="$(TargetsDir)/M25x/yss OS/app/src/bsp.cpp" />
+			</folder>
+			<folder name="inc">
+				<file name="$(ProjectDir)/app/inc/bsp.h" source="$(TargetsDir)/M25x/yss OS/app/inc/bsp.h" />
+				<file name="$(ProjectDir)/app/inc/config.h" source="$(TargetsDir)/M25x/yss OS/app/inc/config.h" />
+			</folder>
+		</folder>
+		<folder name="yss OS Source Files" path="$(TargetsDir)/M25x/yss OS/yss" filter="*.c;*.cpp;*.h;*.s;*.md;LICENSE" recurse="yes">
+		</folder>
+		<folder name="System Files">
+			<file name="$(StudioDir)/source/thumb_crt0.s" expand="no">
+				<property name="c_preprocessor_definitions" value="" />
+			</file>
+			<file name="$(TargetsDir)/M25x/Source/M25x_Startup.s" expand="no" />
+			<file name="$(DeviceVectorsFile)" expand="no">
+				<property name="file_type" value="Assembly" />
+			</file>
+		</folder>
+	</project>
+</projects>

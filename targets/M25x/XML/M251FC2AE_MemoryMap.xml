@@ -1,0 +1,9 @@
+<!DOCTYPE Board_Memory_Definition_File>
+<root name="M251FC2AE">
+    <MemorySegment name="PPB" start="0xE000E000" size="0x1000" access="Read/Write" />
+    <MemorySegment name="FLASH" start="0x00000000" size="0x00008000" access="ReadOnly" />
+    <MemorySegment name="RAM" start="0x20000000" size="0x00002000" access="Read/Write" />
+	<MemorySegment name="EXTMEM" start="0x60000000" size="0x10000000" access="Read/Write" />
+	<MemorySegment name="AHB" start="0x40000000" size="0x32000" access="Read/Write" />
+	<MemorySegment name="APB" start="0x40040000" size="0x93000" access="Read/Write" />
+</root>
