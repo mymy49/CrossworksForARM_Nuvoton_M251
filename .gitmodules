@@ -1,3 +1,3 @@
-[submodule "targets/M25x/yss OS/yss"]
-	path = targets/M25x/yss OS/yss
+[submodule "targets/M251/yss OS/yss"]
+	path = targets/M251/yss OS/yss
 	url = https://github.com/mymy49/yss
