@@ -7,7 +7,7 @@
 		<property name="target_get_partname_script" value="GetPartName()" />
 		<property name="target_match_partname_script" value="MatchPartName(&quot;$(Target)&quot;)" />
 		<property name="target_trace_initialize_script" value="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
-		<property name="target_script_file" value="$(TargetsDir)/Scripts/M251_Target.js" />
+		<property name="target_script_file" value="$(TargetsDir)/M251/Scripts/M251_Target.js" />
 		<property name="target_reset_script" value="Reset();" />
 		<property name="arm_fp_abi" value="Soft" />
 		<property name="arm_linker_stack_size" value="256" choose="Yes" />
@@ -186,7 +186,7 @@
 		<property name="gcc_entry_point" value="Reset_Handler" />
 
 		<folder name="Script Files">
-			<file name="$(TargetsDir)/M251/Scripts/ M251_Target.js" expand="no">
+			<file name="$(TargetsDir)/M251/Scripts/M251_Target.js" expand="no">
 				<property name="file_type" value="Reset Script" />
 			</file>
 		</folder>
