@@ -1,8 +1,8 @@
-# CrossworksForARM_Nuvoton_M25x
+# CrossworksForARM_Nuvoton_M251
 
 ## 본 프로젝트는
 
-본 프로젝트는 Crossworks for ARM IDE에서 Nuvoton M25x 시리즈를 지원하기 위해 만들어졌습니다. baremetal, stdDriver, yss OS 세 가지 환경으로 프로젝트 생성이 가능하도록 했습니다.
+본 프로젝트는 Crossworks for ARM IDE에서 Nuvoton M251 시리즈를 지원하기 위해 만들어졌습니다. baremetal, stdDriver, yss OS 세 가지 환경으로 프로젝트 생성이 가능하도록 했습니다.
 
 ---
 
@@ -59,8 +59,17 @@ gcc 컴파일러를 기반으로 구성된 IDE입니다. 편리한 소스코드 
 
 ![](images/select_file.png)
 
-끝으로 빌드 구성을 선택합니다. THUMB Debug는 최적화 레벨은 없음이고 디버깅 레벨은 Level3 입니다. 모든 디버깅 정보를 갖고 있어, 디버깅에 최적화 되어 있습니다. **THUMB Release**는 최적화  레벨은 Level1이고 디버깅 레벨은 없음 입니다. 세부 구성은 옵션에서 변경이 가능합니다. 아래 두 구성 개발 진행간에 스위칭이 가능합니다. 
+끝으로 빌드 구성을 선택합니다. 
+
+**THUMB Debug**는 최적화 레벨은 없음이고 디버깅 레벨은 Level3 입니다.
+모든 디버깅 정보를 갖고 있어, 디버깅에 최적화 되어 있습니다. 
+
+**THUMB Release**는 최적화  레벨은 Level1이고 디버깅 레벨은 없음 입니다. 
+
+세부 구성은 옵션에서 변경이 가능합니다. 아래 두 구성 개발 진행간에 스위칭이 가능합니다. 
 
 ![](images/select_config.png)
 
 ---
+
+[이 프로젝트는 Markus Klein님의 도움을 받아 제작되었습니다.](https://github.com/Masmiseim36/Kinetis)
