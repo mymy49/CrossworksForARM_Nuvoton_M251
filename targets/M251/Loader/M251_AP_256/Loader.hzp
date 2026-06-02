@@ -43,9 +43,9 @@
       arm_target_device_name="M251KG6AE"
       build_output_file_name="M25x_AP_256_Loader.elf"
       c_preprocessor_definitions="__M251KG6AE__;__M2xx_FAMILY;__M25x_SUBFAMILY;ARM_MATH_ARMV8MBL;FLM_ALGORITHM_M25x_AP_256"
-      c_user_include_directories="$(DeviceIncludePath);$(TargetsDir)/M25x/CMSIS/StdDriver/inc"
+      c_user_include_directories="$(DeviceIncludePath);$(TargetsDir)/M251/CMSIS/StdDriver/inc"
       linker_keep_symbols="libmem_crc32"
-      macros="DeviceIncludePath=$(TargetsDir)/M25x/CMSIS/Device/Include;DeviceHeaderFile=$(TargetsDir)/M25x/CMSIS/Device/Include/M251.h;DeviceMemoryMapFile=$(TargetsDir)/M25x/XML/M251KG6AE_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/M25x/XML/M251_v1_Registers.xml;DeviceSystemFile=$(TargetsDir)/M25x/CMSIS/Device/Source/system_M25x.c;DeviceFamily=M2xx;DeviceSubFamily=M25x;DeviceFLMSourceFile=M25x_AP_256_flm.c" />
+      macros="DeviceIncludePath=$(TargetsDir)/M251/CMSIS/Device/Include;DeviceHeaderFile=$(TargetsDir)/M251/CMSIS/Device/Include/M251.h;DeviceMemoryMapFile=$(TargetsDir)/M251/XML/M251KG6AE_MemoryMap.xml;DeviceRegisterDefinitionFile=$(TargetsDir)/M251/XML/M251_v1_Registers.xml;DeviceSystemFile=$(TargetsDir)/M251/CMSIS/Device/Source/system_M25x.c;DeviceFamily=M2xx;DeviceSubFamily=M25x;DeviceFLMSourceFile=M25x_AP_256_flm.c" />
     <configuration
       Name="Release"
       c_preprocessor_definitions="NDEBUG"
@@ -65,8 +65,8 @@
       recurse="Yes" />
     <folder Name="System Files">
       <file file_name="$(PackagesDir)/libraries/libmem_drivers/libmem_flm_driver.c" />
-      <file file_name="$(TargetsDir)/M25x/Source/M25x_Startup.s" />
-      <file file_name="$(TargetsDir)/M25x/Scripts/M25x_Target.js">
+      <file file_name="$(TargetsDir)/M251/Source/M251_Startup.s" />
+      <file file_name="$(TargetsDir)/M251/Scripts/M251_Target.js">
         <configuration Name="Common" file_type="Reset Script" />
       </file>
       <file file_name="$(StudioDir)/source/thumb_crt0.s" />
