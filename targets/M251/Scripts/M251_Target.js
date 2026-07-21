@@ -33,6 +33,8 @@ function GetPartName()
 		return "M251ZD2AE";
 	else if (n == 0x251B0)
 		return "M251FC2AE";
+	else if (n == 0x25102)
+		return "M251LG6AE";
 }
 
 function MatchPartName(name)

@@ -10,6 +10,7 @@
 			<cpu name="M251FC2AE"/>
 			<cpu name="M251ZD2AE"/>
 			<cpu name="M251KG6AE"/>
+			<cpu name="M251LG6AE"/>
 		</category>
 	</targets>
 </package> 
